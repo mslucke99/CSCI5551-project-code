@@ -26,3 +26,15 @@ TrajectoryPlannerROS:
   vx_samples: 18
   vtheta_samples: 20
   sim_granularity: 0.05
+
+# Trajectory scoring parameters
+  meter_scoring: true # Whether the gdist_scale and pdist_scale parameters should assume that goal_distance and path_distance are expressed in units of meters or cells. Cells are assumed by default (false).
+  heading_scoring: false  #Whether to score based on the robot's heading to the path or its distance from the path. default false
+  dwa: true #Whether to use the Dynamic Window Approach (DWA)_ or whether to use Trajectory Rollout
+  simple_attractor: false
+  publish_cost_grid_pc: true
+
+#Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.05
+  escape_reset_dist: 0.1
+  escape_reset_theta: 0.1
