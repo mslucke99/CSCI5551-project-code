@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>turtlebot3_slaman</name>
+  <version>1.0.0</version>
+  <description>
+    The turtlebot3_slaman package runs navigation and builds a map simultaneously.
+  </description>
+  <license>Apache 2.0</license>
+  <maintainer email="tlach007@umn.edu">Matt Tlachac</maintainer>
+  <maintainer email="lucke096@umn.edu">Michael Lucke</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>turtlebot3_bringup</exec_depend>
+</package>

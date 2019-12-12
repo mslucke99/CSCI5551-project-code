@@ -8,7 +8,7 @@
     <arg name="model" value="$(arg model)" />
   </include>
 
-  <!-- SLAM: Gmapping, Cartographer, Hector, Karto, Frontier_exploration, RTAB-Map -->
+  <!-- SLAM: Gmapping -->
   <include file="$(find turtlebot3_slam)/launch/turtlebot3_gmapping.launch">
     <arg name="model" value="$(arg model)"/>
     <!-- arg name="configuration_basename" value="$(arg configuration_basename)"/ -->
@@ -17,7 +17,7 @@
   <!-- rviz -->
   <group if="$(arg open_rviz)"> 
     <node pkg="rviz" type="rviz" name="rviz" required="true"
-    args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_navigation.rviz"/>
+    args="-d $(find turtlebot3_slaman)/rviz/turtlebot3_slaman.rviz"/>
   </group>
 
 
@@ -26,11 +26,11 @@
 
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find turtlebot3_navigation)/param/costmap_common_params_burger_slaman.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find turtlebot3_navigation)/param/costmap_common_params_burger_slaman.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find turtlebot3_navigation)/param/local_costmap_params_slaman.yaml" command="load" />
-    <rosparam file="$(find turtlebot3_navigation)/param/global_costmap_params_slaman.yaml" command="load" />
-    <rosparam file="$(find turtlebot3_navigation)/param/base_local_planner_params_slaman.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_slaman)/param/costmap_common_params_burger_slaman.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find turtlebot3_slaman)/param/costmap_common_params_burger_slaman.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find turtlebot3_slaman)/param/local_costmap_params_slaman.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_slaman)/param/global_costmap_params_slaman.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_slaman)/param/base_local_planner_params_slaman.yaml" command="load" />
 
     <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
     <param name="base_local_planner" type="string" value="base_local_planner/TrajectoryPlannerROS" />
