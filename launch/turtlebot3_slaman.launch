@@ -20,17 +20,17 @@
     args="-d $(find turtlebot3_slaman)/rviz/turtlebot3_slaman.rviz"/>
   </group>
 
-
   <!-- AMCL -->
   <include file="$(find turtlebot3_navigation)/launch/amcl.launch"/>
 
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find turtlebot3_slaman)/param/costmap_common_params_burger_slaman.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find turtlebot3_slaman)/param/costmap_common_params_burger_slaman.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find turtlebot3_slaman)/param/local_costmap_params_slaman.yaml" command="load" />
-    <rosparam file="$(find turtlebot3_slaman)/param/global_costmap_params_slaman.yaml" command="load" />
-    <rosparam file="$(find turtlebot3_slaman)/param/base_local_planner_params_slaman.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_slaman)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find turtlebot3_slaman)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find turtlebot3_slaman)/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_slaman)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_slaman)/param/base_local_planner_params.yaml" command="load" />
+    <!-- rosparam file="$(find turtlebot3_slaman)/param/move_base_params.yaml" command="load" / -->
 
     <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
     <param name="base_local_planner" type="string" value="base_local_planner/TrajectoryPlannerROS" />
