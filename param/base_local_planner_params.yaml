@@ -33,8 +33,8 @@ TrajectoryPlannerROS:
 
 # Trajectory scoring parameters
   meter_scoring: true
-  pdist_scale: 1.5
-  gdist_scale: 0.8
+  pdist_scale: 1.75
+  gdist_scale: 0.5
   occdist_scale: 0.01
   heading_lookahead: 0.325
   heading_scoring: false
