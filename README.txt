@@ -2,13 +2,7 @@ This is a ROS package that works with the Turtlebot3 Burger.
 It allows navigation in an unfamiliar environment
 It relies on the lidar sensor, which is not very good on the Turtlebot
 we called this slaman because it is SLAM and it also uses the navigation
-stack, so SLAM And Navigation = SLAMAN. Don't worry, we also cringe
-when we hear that name. The name Salmon Autonomous Localization+Mapping
-On Navigation would have been better because then it would be a
-recursive acronym and a fish name allowing more cringing. But not as
-much as the fact that this file was written directly in github,
-intentionally, exclusively for the purpose of being cringeworthy. Yes,
-I am cringing as I write this introduction.
+stack, so SLAM And Navigation = SLAMAN.
 
 ########################################################################
 Installation
